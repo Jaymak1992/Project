@@ -6,7 +6,7 @@ void main()
     printf("Enter the Electricity Units :- ");
     scanf("%f",&unit);
 
-    if(unit<100)
+    if(unit>=1 && unit<100)
     {
         unit_bill=unit*1;
         printf("\n\n Unit Bill is %.2f ",unit_bill);
@@ -34,12 +34,16 @@ void main()
         total_bill=(unit_bill*5/100)+(unit_bill);
         printf("\n\n Total Bill is %.2f ",total_bill);
     }
-    else
+    else if (unit>=400)
     {
         unit_bill=unit*5;
         printf("\n\n Unit Bill is %.2f ",unit_bill);
         total_bill=(unit_bill*5/100)+(unit_bill);
         printf("\n\n Total Bill is %.2f ",total_bill);
+    }
+    else
+    {
+        printf("Invalide Input");
     }
     
     
